@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #000002;
+  background: #131342;
   overflow-y: auto;
 }
 
@@ -1059,7 +1059,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: #131342;
 }
 
 #footer .copyright {
