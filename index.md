@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Inicio
+title: INICIO
 landing-title: 'Sistecma Blog'
 description: null
 image: null

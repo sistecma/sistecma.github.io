@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cursos en Vivo
+title: CURSOS EN VIVO
 description: Información sobre nuestros cursos en vivo
 image: assets/images/banner.jpg
 nav-menu: true
