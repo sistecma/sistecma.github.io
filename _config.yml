@@ -1,0 +1,40 @@
+# site settings
+title: Sistecma
+subtitle: Innovación y Tecnología
+email: admin@sistecma.com
+description: <h5>Aprende la mejor tecnología.<br/>Acelera tu carrera profesional.<h5/>
+#baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site
+author:
+street_address: 
+city: Guayaquil
+state: Guayas
+zip_code: EC90602
+country: Ecuador
+phone: (593) 989812730
+
+# homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 3
+
+# social settings
+500px_url:
+facebook_url: https://www.facebook.com/sistecma
+github_url: https://github.com/sistecma
+gitlab_url:
+googleplus_url:
+instagram_url:
+linkedin_url: https://www.linkedin.com/company/sistecma
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/sistecmacom
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-gist  
