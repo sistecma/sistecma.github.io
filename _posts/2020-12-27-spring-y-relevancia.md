@@ -3,6 +3,7 @@ layout: post
 title: Spring Framework y su Relevancia
 description: La importancia de Spring Framework en el mundo actual.
 image: 
+author: Hernán Moreno
 ---
 
 #### Las bondades
