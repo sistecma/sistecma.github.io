@@ -19,9 +19,24 @@ Para usar IoC con Xml recomiendo usar [AbstractApplicationContext](https://docs.
 
 {% gist 5ee456ee8ead01d3f45a97c6eb67cf72 %}
 
+#### Tipos de Inyección
+Cuando configuras beans vía Xml lo común es que inyectes tus dependencias vía método y constructor. 
+
+* En la inyección basada en métodos, proporcionamos las dependencias requeridas como parámetros de campo para la clase y los valores se establecen utilizando los métodos de setXX de las propiedades.
+* En la inyección basada en constructor, proporcionamos las dependencias requeridas al constructor de la clase dependiente.
+
+En la práctica, prefiere la inyección vía constructor tiene sus ventajas. Puesto que creamos un objeto llamando a un constructor. Si el constructor espera todas las dependencias requeridas como parámetros, entonces podemos estar 100% seguros de que la clase nunca será instanciada sin sus dependencias inyectadas. El contenedor de IoC se asegura de que todos los argumentos proporcionados en el constructor estén disponibles antes de pasarlos al constructor. Esto ayuda a prevenir la infame NullPointerException.
+
+Finalmente, La inyección de constructor es extremadamente útil ya que no tenemos que escribir lógica de negocios separada en todas partes para verificar si todas las dependencias requeridas están cargadas, simplificando así la complejidad del código.
+
+#### Organización de la metadata
+Los Xml de configuración pueden estar alojados en un solo archivo o divididos en varios archivos, para mejor organización. Finalmente todo es cargado en el contenedor de Spring como si fuera una solo archivo. Como se unen? lo puedes hacer vía el [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html) simplemente pasas como parámetros los archivos Xmls a su constructor, obviamente dichos archivos deben estar visibles en tu classpath.
+
+El otro modo recomendado es vía imports directamente dentro de los Xmls.Así mismo recomiendo todos los Xml visibles en tu classpath.  
+
 #### El mini-proyecto de juguete
 
-Para entender como funciona, vamos a revisar los conceptos alrededor de un ejemplo básico. Vamos a asumir que tenemos el siguiente proyecto de juguete:
+Para entender como funciona todo esto, vamos a revisar los conceptos alrededor de un ejemplo básico. Vamos a asumir que tenemos el siguiente proyecto de juguete:
 * Queremos simular la comunicación entre una computadora y un servidor.
 * La computadora se puede encender y apagar.
 * El servidor asumimos que esta siempre encendido.
@@ -32,26 +47,16 @@ Para entender como funciona, vamos a revisar los conceptos alrededor de un ejemp
 
 **Nota-** A fín de mostrar las carácteristicas más importantes de Spring con Xml verás en el código que he sobre-diseñado en algunas partes. Todo esto con fines didácticos y demostrativos de las capacidades de Spring.
 
-#### Tipos de Inyección
-Cuando configuras beans vía Xml lo común es que inyectes tus dependencias vía método y constructor. 
-
-* En la inyección basada en métodos, proporcionamos las dependencias requeridas como parámetros de campo para la clase y los valores se establecen utilizando los métodos de setXX de las propiedades.
-* En la inyección basada en constructor, proporcionamos las dependencias requeridas al constructor de la clase dependiente.
-
-En la práctica, prefiere la inyección vía constructor tiene sus ventajas. Puesto que creamos un objeto llamando a un constructor. Si el constructor espera todas las dependencias requeridas como parámetros, entonces podemos estar 100% seguros de que la clase nunca será instanciada sin sus dependencias inyectadas. El contenedor de IoC se asegura de que todos los argumentos proporcionados en el constructor estén disponibles antes de pasarlos al constructor. Esto ayuda a prevenir la infame NullPointerException.
-
-Finalmente, La inyección de constructor es extremadamente útil ya que no tenemos que escribir lógica de negocios separada en todas partes para verificar si todas las dependencias requeridas están cargadas, simplificando así la complejidad del código.
- 
-
 #### Diseño
 * Vamos a usar Spring con Xml metadata. 
-* La clase que arranca al contenedor Spring la llamaremos: [XmlConfig.java](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/XmlConfig.java#L6)
 * Tendremos una interfaz que contiene el contrato de un [Equipo](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Equipo.java#L3)
 * Tendremos una interfaz que contiene el contrato de un [Monitor](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Monitor.java#L3). Porqué una interfaz y no directamente una clase?. Pueden haber diversos tipos de monitores. Adicionalmente quiero hacer evidente uno de los puntos fuertes de Spring que tiene que ver con el desacople y como elegir en configuración la implementación.
 * Tendremos una implementación de Monitor llamada [MonitorImpl](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/MonitorImpl.java#L4)  
 * Tendremos una clase [Computadora](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/ComputadoraDI.java#L3) que implementa el contrato de Equipo. Tiene como dependencias a dependencias a Monitor, su hostname, e ip. A esta clase le vamos inyectar estas dependencias vía su constructor. 
 * Tendremos una clase [Servidor](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Servidor.java#L4) que implementa el contrato de Equipo. Tiene como dependencias hostname e ip estos atributos serán inyectados vía setters (usando sus métodos setXX).
-* Tendremos una clase llamada [Red] que tiene como dependencia a los equipos Computadora y Servidor. Así mismo ya inyección será vía métodos. 
+* Tendremos una clase llamada [Red](https://github.com/sistecma/spring-desde-cero/blob/a4e5948dbda5336f49d5390bb31b7d568d294f65/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Red.java#L4) que tiene como dependencia a los equipos Computadora y Servidor. Así mismo ya inyección será vía métodos. 
+* La clase que arranca al contenedor Spring la llamaremos: [XmlConfig.java](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/XmlConfig.java#L6)
+* Para hacerlo más divertido dividiremos las definiciones de la metada (archivos Xml, recuerdas que es con Xml?) en varias partes. Así tendremos contexto-1.xml
 
 #### Conclusiones
 
