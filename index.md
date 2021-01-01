@@ -12,3 +12,5 @@ show_tile: false
 
 
 El repositorio de Sistecma en [GitHub](https://github.com/sistecma): representa el index donde están todos los repositorios asociados con Sistecma. Cada repositorio representa un aprendizaje individual o modular.
+
+Bienvenido.
