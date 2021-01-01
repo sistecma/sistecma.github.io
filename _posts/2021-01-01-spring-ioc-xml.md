@@ -83,9 +83,12 @@ Para hacerlo más divertido dividiremos las definiciones de la metada (recuerdas
 #### contexto-1.xml
 Tenemos [contexto-1.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-1.xml) que esta en el classpath y tiene las definiciones de los beans de tipo ComputadoraDI y con id computadoraRef (identificador único entre todos los Xml del proyecto). El bean computadoraRef tiene 3 propiedades entre ellas la referencia del bean monitor y 2 valores (ip y hostname) dichas dependencias son pasadas vía inyección a su constructor.
 
-El contexto-1.xml también tiene la definición del bean servidorRef que sostiene la instancia de la clase Servidor. Este tiene como propiedades ip y hostname.
-
 {% gist 2fdcccc639275fc52a47f8fe59bfb3d9 %}
+
+El contexto-1.xml también tiene la definición del bean servidorRef que sostiene la instancia de la clase Servidor. Este tiene como propiedades ip y hostname. Así mismo el contenedor es quien ejecuta el método boot (observar el tag init-method) al momento de post-construir el bean computadoraRef asi mismo invoca el método shutdown (observar el tag destroy-method) al cerrarse el contenedor. Cuando cierras el contenedor [cuando se ejecuta este fragmento en XmlConfig.java](https://github.com/sistecma/spring-desde-cero/blob/a4e5948dbda5336f49d5390bb31b7d568d294f65/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/XmlConfig.java#L33)
+
+{% gist 0e200d641d6b5de76c940b9a2374da65 %}
+
 
 #### contexto-2.xml
 El [contexto-2.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-2.xml) tiene la definición del bean con id red que tiene la instancia de la clase Red y tiene como dependencias las referencias de los beans computadora y servidor (estos exactamente los nombres de las propiedades en el código Java definido en Red.java). Dichos beans estan referenciados en el archivo contexto-1.xml
