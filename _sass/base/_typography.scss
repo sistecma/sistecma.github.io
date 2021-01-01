@@ -60,6 +60,10 @@
 		margin: 0 0 _size(element-margin) 0;
 	}
 
+	li {
+	    color: _palette(text-black);
+	}
+	
 	blockquote > p {
 		margin: 0;
 	}
