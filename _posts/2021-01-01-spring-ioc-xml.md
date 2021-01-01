@@ -68,7 +68,7 @@ Para entender como funciona todo esto, vamos a revisar los conceptos alrededor d
 
 {% gist cd8b3675ef88f19fdfc3a2993f9cee6a %}
 
-* Tenemos una clase llamada [Red](https://github.com/sistecma/spring-desde-cero/blob/a4e5948dbda5336f49d5390bb31b7d568d294f65/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Red.java#L4) que tiene como dependencia a los equipos Computadora y Servidor. Así mismo ya inyección será vía métodos. 
+* Tenemos una clase llamada [Red](https://github.com/sistecma/spring-desde-cero/blob/a4e5948dbda5336f49d5390bb31b7d568d294f65/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Red.java#L4) que tiene como dependencia a los equipos Computadora y Servidor. Así mismo la inyección será vía métodos. 
 
 {% gist 52bf7b9f9f4eb0a938811a5a3e741280 %}
 
@@ -77,22 +77,22 @@ Para entender como funciona todo esto, vamos a revisar los conceptos alrededor d
 {% gist 4611b85d1fdaebaf5d89e92ae2d5cc85 %}
 
 
-##### Wiring
+#### Wiring
 Para hacerlo más divertido dividiremos las definiciones de la metada (recuerdas que es con Xml?) en varias partes. 
 
-##### contexto-1.xml
+#### contexto-1.xml
 Tenemos [contexto-1.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-1.xml) que esta en el classpath y tiene las definiciones de los beans de tipo ComputadoraDI y con id computadoraRef (identificador único entre todos los Xml del proyecto). El bean computadoraRef tiene 3 propiedades entre ellas la referencia del bean monitor y 2 valores (ip y hostname) dichas dependencias son pasadas vía inyección a su constructor.
 
 El contexto-1.xml también tiene la definición del bean servidorRef que sostiene la instancia de la clase Servidor. Este tiene como propiedades ip y hostname.
 
 {% gist 2fdcccc639275fc52a47f8fe59bfb3d9 %}
 
-##### contexto-2.xml
+#### contexto-2.xml
 El [contexto-2.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-2.xml) tiene la definición del bean con id red que tiene la instancia de la clase Red y tiene como dependencias las referencias de los beans computadora y servidor (estos exactamente los nombres de las propiedades en el código Java definido en Red.java). Dichos beans estan referenciados en el archivo contexto-1.xml
 
 {% gist d042fe25b01a9fa6d2fba3280a739e40 %}
 
-##### contexto-3.xml
+#### contexto-3.xml
 El [contexto-3.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-3.xml) contiene la definición del Monitor. 
 
 {% gist af909cb7c6c9fdd2fe31ec3b75eefd5c %}
