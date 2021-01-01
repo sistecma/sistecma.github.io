@@ -93,14 +93,17 @@ El [contexto-2.xml](https://github.com/sistecma/spring-desde-cero/blob/master/ap
 {% gist d042fe25b01a9fa6d2fba3280a739e40 %}
 
 #### contexto-3.xml
-El [contexto-3.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-3.xml) contiene la definición del Monitor. 
+El [contexto-3.xml](https://github.com/sistecma/spring-desde-cero/blob/master/app/ioc-di-xml/src/main/resources/contexto-3.xml) contiene la definición del Monitor. Dicho bean esta referenciado en contexto-1.xml
 
 {% gist af909cb7c6c9fdd2fe31ec3b75eefd5c %}
 
 
 #### Conclusiones
 
-En este breve artículo, hemos discutido los aspectos básicos sobre como funciona el contenedor de Spring y su uso con Xml. También revisamos como realizar inyección por constructor, e inyección por método. Finalmente revisamos ciertos mecanismos sobre como organizar nuestra metadata.
+En este breve artículo, hemos discutido: 
+* Los aspectos básicos sobre como funciona el contenedor de Spring y su uso con Xml. 
+* Revisamos como realizar inyección por constructor, e inyección por método. 
+* Revisamos ciertos mecanismos sobre como organizar nuestra metadata en diversos Xml y como entrelazarlos e invocarlos en código.
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero).         
 
