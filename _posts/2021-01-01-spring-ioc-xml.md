@@ -23,7 +23,7 @@ Para usar IoC con Xml recomiendo usar [AbstractApplicationContext](https://docs.
 #### Tipos de Inyección
 Cuando configuras beans vía Xml, lo común es que inyectes tus dependencias vía método o constructor. 
 
-* En la inyección basada en métodos, proporcionamos las dependencias mediando el paso de valores que son requeridos como parámetros de los setXX de la clase dependiente. Donde XX corresponde a la propiedad o atributo de dicha clase. 
+* En la inyección basada en métodos, proporcionamos las dependencias mediante el paso de los valores que son requeridos como parámetros de los setXX de la clase dependiente. Donde XX corresponde a la propiedad o atributo de dicha clase. 
 * En la inyección basada en constructor, le proporcionamos las dependencias requeridas al constructor de la clase dependiente.
 
 En la práctica, preferir la inyección vía constructor tiene sus ventajas. Puesto que creamos el objeto llamando a su constructor. Así el constructor espera todas las dependencias requeridas como parámetros, entonces podemos estar 100% seguros de que la clase nunca será instanciada sin sus dependencias inyectadas. El contenedor de IoC se asegura de que todos los argumentos proporcionados en el constructor estén disponibles antes de pasarlos al mismo. Esto ayuda a prevenir el infame NullPointerException por ejemplo. Otro beneficio es que previene las [dependencias circulares](https://es.qaz.wiki/wiki/Circular_dependency)
