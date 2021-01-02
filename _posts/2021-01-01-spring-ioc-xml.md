@@ -31,7 +31,7 @@ En la práctica, preferir la inyección vía constructor tiene sus ventajas. Pue
 Finalmente, La inyección por constructor es extremadamente útil ya que no tenemos que escribir la lógica de negocios separada en todas partes para verificar si todas las dependencias requeridas están cargadas, simplificando así la complejidad del código.
 
 #### Organización de la metadata
-Los Xml de configuración pueden estar alojados en un solo archivo o divididos en varios archivos, para mejor organización. Al momento de arrancar el contenedor, todas la metadata es cargada como si fuera una solo archivo. Como se pueden cargar varios archivos Xml?. Lo puedes hacer vía el [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html) simplemente pasas como parámetros los archivos Xmls a su constructor, obviamente dichos archivos deben estar visibles en tu classpath.
+Los Xml de configuración pueden estar alojados en un solo archivo o divididos en varios archivos, para mejor organización. Al momento de arrancar el contenedor, todas la metadata es cargada como si fuera un solo archivo. Como se pueden cargar varios archivos Xml?. Lo puedes hacer vía el [ClassPathXmlApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html) simplemente pasas como parámetros los archivos Xmls a su constructor, obviamente dichos archivos deben estar visibles en tu classpath.
 
 El otro modo, es vía imports directamente dentro de los Xmls. Así mismo, todos los Xml deben ser visibles en tu classpath.  
 
@@ -61,7 +61,7 @@ Para entender como funciona todo esto, vamos a revisar los conceptos alrededor d
 
 {% gist c2a80788eb40c5349e909230e6b3fce2 %}
 
-* Tenemos una clase [Computadora](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/ComputadoraDI.java#L3) que implementa el contrato de Equipo. Tiene como dependencias a dependencias a Monitor, su hostname, e ip. A esta clase le vamos inyectar estas dependencias vía su constructor. 
+* Tenemos una clase [Computadora](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/ComputadoraDI.java#L3) que implementa el contrato de Equipo. Tiene como dependencias a Monitor, su hostname, e ip. A esta clase le vamos inyectar dichas dependencias vía su constructor. 
 
 {% gist 074047535120f980942095baaa8471f3 %}
 
