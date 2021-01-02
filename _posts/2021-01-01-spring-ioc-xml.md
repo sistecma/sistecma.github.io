@@ -105,6 +105,10 @@ El [contexto-3.xml](https://github.com/sistecma/spring-desde-cero/blob/master/ap
 
 {% gist af909cb7c6c9fdd2fe31ec3b75eefd5c %}
 
+#### Resultado de ejecución
+Al ejecutar la clase XmlConfig el resultado de salida de consola es:
+
+{% gist 5ffcddf35ac411a83c2321946fbd49bf %}
 
 #### Conclusiones
 
