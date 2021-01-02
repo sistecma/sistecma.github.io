@@ -74,8 +74,8 @@ Para entender como funciona todo esto, vamos a revisar los conceptos alrededor d
 {% gist 52bf7b9f9f4eb0a938811a5a3e741280 %}
 
 * La clase que arranca al contenedor Spring la llamaremos: [XmlConfig.java](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/XmlConfig.java#L6). Esta clase así mismo sostiene una lógica de negocio simple:
-- Obtiene los beans de cada equipo (computadora, servidor) e imprime sus hostname en la consola
-- Obtiene el bean de la red y establece un ping de comunicación entre los equipos
+* Obtiene los beans de cada equipo (computadora, servidor) e imprime sus hostname en la consola
+* Obtiene el bean de la red y establece un ping de comunicación entre los equipos
 
 {% gist 4611b85d1fdaebaf5d89e92ae2d5cc85 %}
 
