@@ -11,7 +11,7 @@ La Inversión de Control (IoC) en Spring puede realizarse vía Xml o con configu
 
 Cuando tienes que usar una librería  típica empaquetada en un jar ,y simplemente no tienes accesos a los fuentes, o si quieres que tu código se mantenga lo más limpio posible como [POJOs](https://es.wikipedia.org/wiki/Plain_Old_Java_Object)  evitando así que tus desarrollos queden acoplados y dependientes de Spring. 
 
-**Nota-** Como indiqué previamente, la tendencia es usar anotaciones para casi todo, sin embargo por propósitos educativos abordamos brevemente la configuración vía Xml puesto que la considero más simple para iniciar con Spring. En otro artículo revisaremos la configuración vía Java a fondo. Así mismo si tus nociones sobre IoC no estan claras, te recomiendo que revises el post como parte de la Serie de artículos Spring desde Cero porque aquí ya estoy asumiendo que lo tienes claro. Te dejo el enlace respecto a ello [aquí]({% post_url 2020-12-28-welcome-ioc-di %})
+**Nota-** Como indiqué previamente, la tendencia es usar anotaciones para casi todo, sin embargo por propósitos educativos abordamos brevemente la configuración vía Xml puesto que la considero más simple para iniciar con Spring. En otro artículo revisaremos la configuración vía Java a fondo. Así mismo si tus nociones sobre IoC no estan claras, te recomiendo que revises el post como parte de la Serie de artículos Spring desde Cero porque aquí ya estoy asumiendo que lo tienes claro. Te dejo el enlace respecto a ello [aquí]({{site.url}}/2020/12/28/ioc-di.html) 
 
 
 #### AbstractApplicationContext
@@ -51,7 +51,7 @@ Para entender como funciona todo esto, vamos a revisar los conceptos alrededor d
 * Vamos a usar Spring con Xml metadata. 
 * Tenemos una interfaz que contiene el contrato de un [Equipo](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Equipo.java#L3)
 
-{% gist 20c28f1701ef8aca69b4da47281e699 %}
+{% gist 20c28f1701ef8aca69b4da47281e6992 %}
 
 * Tenemos una interfaz que contiene el contrato de un [Monitor](https://github.com/sistecma/spring-desde-cero/blob/1fcdf6dc9bd1319b3a8fbf401c638ad25aad9ea3/app/ioc-di-xml/src/main/java/com/sistecma/springdesdecero/iocdi/Monitor.java#L3). Porqué una interfaz y no directamente una clase?. Porque pueden haber diversos tipos de monitores. Adicionalmente quiero hacer evidente uno de los puntos fuertes de Spring que tiene que ver con el desacople y como elegir en configuración la implementación.
 
