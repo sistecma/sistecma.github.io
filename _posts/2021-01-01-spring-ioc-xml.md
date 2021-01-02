@@ -4,6 +4,7 @@ title: Spring IoC con Xml
 description: Revisión del uso de Spring con Xml.
 image: 
 author: Hernán Moreno
+tags: SpringFramework
 ---
 
 La Inversión de Control (IoC) en Spring puede realizarse vía Xml o con configuración en Java. Actualmente el estándar es usar la configuración vía Java, sin embargo existen ciertos casos de uso para los cuales usar Xml es lo más apropiado. Por ejemplo:
