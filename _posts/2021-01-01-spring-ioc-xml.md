@@ -119,4 +119,4 @@ En este breve artículo, hemos discutido:
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero), junto con las instrucciones de ejecución.         
 
-**Anterior post:** [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2021/01/01/spring-ioc-xml.html)
+**Anterior post:** [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2020/12/28/ioc-di.html)
