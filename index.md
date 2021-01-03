@@ -13,7 +13,7 @@ show_tile: false
 
 El repositorio de Sistecma en [GitHub](https://github.com/sistecma): representa el index donde están todos los repositorios asociados con Sistecma. Cada repositorio representa un aprendizaje individual o modular.
 
-#### Series Spring desde Cero
+### Series Spring desde Cero
 Demuestra las capacidades de Spring Framework desde un punto de vista básico (desde cero) a fín de facilitar el aprendizaje y eliminar las barreras para los nuevos desarrolladores que deseen trabajar con Spring Framework. 
 
 Pre-requisitos:
