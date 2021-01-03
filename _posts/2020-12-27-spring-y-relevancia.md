@@ -25,3 +25,5 @@ Si tienes dudas respecto a si Java en sí es relevante aquí te dejo la comparat
 
 Como puedes observar, Spring Framework y Java en general son herramientas altamente demandadas a nivel mundial. Puedes invertir tu tiempo con confianza en aprender Spring, es una herramienta poderosa, moderna y con mucho futuro por delante.
 
+
+Siguente post: [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2020/12/28/ioc-di.html)
