@@ -19,6 +19,8 @@ Demuestra las capacidades de Spring Framework desde un punto de vista básico (d
 Pre-requisitos:
 * Conocimientos de Java básico.
 * Conocimientos de patrones de diseño.
+* Conocimientos del uso de git
+* Conocimientos de maven
 
 A continuación el índice de artículos al momento:
 
