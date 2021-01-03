@@ -26,7 +26,11 @@ Cuando configuras beans vía Xml, lo común es que inyectes tus dependencias ví
 * En la inyección basada en métodos, proporcionamos las dependencias mediante el paso de los valores que son requeridos como parámetros de los setXX de la clase dependiente. Donde XX corresponde a la propiedad o atributo de dicha clase. 
 * En la inyección basada en constructor, le proporcionamos las dependencias requeridas al constructor de la clase dependiente.
 
-En la práctica, preferir la inyección vía constructor tiene sus ventajas. Puesto que creamos el objeto llamando a su constructor. Así el constructor espera todas las dependencias requeridas como parámetros, entonces podemos estar 100% seguros de que la clase nunca será instanciada sin sus dependencias inyectadas. El contenedor de IoC se asegura de que todos los argumentos proporcionados en el constructor estén disponibles antes de pasarlos al mismo. Esto ayuda a prevenir el infame NullPointerException por ejemplo. Otro beneficio es que previene las [dependencias circulares](https://es.qaz.wiki/wiki/Circular_dependency)
+En la práctica, preferir la inyección vía constructor tiene sus ventajas puesto que creamos el objeto llamando a su constructor. Algunas de ellas son:
+* El constructor espera todas las dependencias requeridas como parámetros, entonces podemos estar 100% seguros de que la clase nunca será instanciada sin sus dependencias inyectadas. 
+* El contenedor de IoC se asegura de que todos los argumentos proporcionados en el constructor estén disponibles antes de pasarlos al mismo. Esto ayuda a prevenir el infame NullPointerException por ejemplo. 
+* El objecto instanciado se convierte en [inmutable](https://es.wikipedia.org/wiki/Objeto_inmutable), evitando efectos colaterales por ejemplo son seguros para usarse en hilos(threads-safe), su estado es consistente y son más simples de manejar una vez instanciados.
+* Otro beneficio es que previene las [dependencias circulares](https://es.qaz.wiki/wiki/Circular_dependency)
 
 Finalmente, La inyección por constructor es extremadamente útil ya que no tenemos que escribir la lógica de negocios separada en todas partes para verificar si todas las dependencias requeridas están cargadas, simplificando así la complejidad del código.
 
