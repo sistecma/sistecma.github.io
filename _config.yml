@@ -37,4 +37,5 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-gist  
+  - jekyll-gist
+  - jekyll-seo-tag  
