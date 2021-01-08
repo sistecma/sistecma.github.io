@@ -26,6 +26,7 @@ A continuación el índice de artículos al momento:
 * [Spring Framework y su Relevancia](https://sistecma.github.io/2020/12/27/spring-y-relevancia.html) 
 * [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2020/12/28/ioc-di.html)
 * [Spring IoC con Xml](https://sistecma.github.io/2021/01/01/spring-ioc-xml.html)
+* [Alcance de Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html)
 
 
 Bienvenido.
