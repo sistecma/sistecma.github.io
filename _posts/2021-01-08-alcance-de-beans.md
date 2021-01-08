@@ -8,7 +8,7 @@ author: Hernán Moreno
 
 Spring Framework provee un mecanismo llamado scope o alcance de su ciclo de vida (en español), para todos los beans definidos en su contenedor. Posee 6 tipos de alcance pre-concebidos. 
 
-Nota- En este artículo abordaré solo configuración vía Xml, configuración vía anotaciones la abordaré en otro artículo como parte de anotaciones en Java con Spring.
+**Nota-** En este artículo abordaré solo configuración vía Xml, configuración vía anotaciones la abordaré en otro artículo como parte de anotaciones en Java con Spring.
 
 #### Para cualquier tipo de aplicación
 * Singleton (Este es el alcance por defecto): Spring crea un solo bean por contenedor.
@@ -20,7 +20,7 @@ Nota- En este artículo abordaré solo configuración vía Xml, configuración v
 * Sesión: Es una sola instancia durante la sesión de HTTP.
 * Websocket: Es una sola instancia durante el ciclo de vida del websocket.
 
-Nota- Asegúrate de haber hecho una configuración apropiada a tu aplicación web basada en Spring/Spring MVC antes de usarlos. En próximos tutoriales explicaré a fondo el uso de estos beans como parte de Spring Web/MVC y Boot.
+**Nota-** Asegúrate de haber hecho una configuración apropiada a tu aplicación web basada en Spring/Spring MVC antes de usarlos. En próximos tutoriales explicaré a fondo el uso de estos beans como parte de Spring Web/MVC y Boot.
 
 #### Singleton
 Singleton es el alcance por defecto en el contenedor de Spring. Le dice al contenedor crear y manejar solamente una instancia del bean, por contenedor. Esta única instancia es almacenada en el cache de los beans tipo singletons. Todos los subsecuentes invocaciones y referencias para ese específico nombre de bean retornarán la instancia en cache. En general es útil para beans que no manejan estado (stateless beans)
