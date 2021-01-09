@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ciclo de vida de Spring Beans
-description: Cúal es el ciclo de vida de un Spring Bean y como aprovecharlo
+title: Estados asociados al ciclo de vida de Spring Beans
+description: Estados asociados a creación y destrucción de beans y como aprovecharlo
 image: 
 author: Hernán Moreno
 ---
