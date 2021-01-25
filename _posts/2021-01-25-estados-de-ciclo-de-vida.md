@@ -11,9 +11,9 @@ Spring ofrece varias formas de aprovechar el ciclo de vida de los beans. En muy 
 #### Creación
 La etapa de Creación abarca desde la instanciación del bean hasta que esta listo para uso. Durante esta etapa el Contenedor de Spring sigue a través de las siguientes sub-etapas o pasos en estricta secuencia:
 
-1- Instanciación
-2- Llenado de propiedades
-3- Llamar a BeanNameAware.setBeanName
+* 1- Instanciación
+* 2- Llenado de propiedades
+* 3- Llamar a BeanNameAware.setBeanName
 4- Llamar a BeanFactoryAware.setBeanFactory
 5- Llamar a ApplicationContextAware.setApplicationContext
 6- Pre-inicialización (BeanPostProcessor)
