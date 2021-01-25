@@ -11,22 +11,22 @@ Spring ofrece varias formas de aprovechar el ciclo de vida de los beans. En muy 
 #### Creación
 La etapa de Creación abarca desde la instanciación del bean hasta que esta listo para uso. Durante esta etapa el Contenedor de Spring sigue a través de las siguientes sub-etapas o pasos en estricta secuencia:
 
-* 1- Instanciación
-* 2- Llenado de propiedades
-* 3- Llamar a BeanNameAware.setBeanName
-4- Llamar a BeanFactoryAware.setBeanFactory
-5- Llamar a ApplicationContextAware.setApplicationContext
-6- Pre-inicialización (BeanPostProcessor)
-7- Llamar a InitializingBeans.afterPropertiesSet
-8- Método Init personalizado
-9- Post-inicialización (BeanPostProcessor)
+1. Instanciación
+2. Llenado de propiedades
+3. Llamar a BeanNameAware.setBeanName
+4. Llamar a BeanFactoryAware.setBeanFactory
+5. Llamar a ApplicationContextAware.setApplicationContext
+6. Pre-inicialización (BeanPostProcessor)
+7. Llamar a InitializingBeans.afterPropertiesSet
+8. Método Init personalizado
+9. Post-inicialización (BeanPostProcessor)
 
 #### Eliminación
 Es la etapa que ocurre una vez que el contenedor se apaga. Los pasos son los siguientes:
 
-1- Apagado del contenedor
-2- Llamar a destroy de los beans desechables.
-3- Llamar a método personalizado destroy
+1. Apagado del contenedor
+2. Llamar a destroy de los beans desechables.
+3. Llamar a método personalizado destroy
 
 #### Interfaces XXAware
 Spring proporciona varias interfaces XXAware. Rara vez son necesarias por los programadores puesto acoplan nuestro código a Spring. Pero si la implementamos, con ellas podemos acceder a la infraestructura de Spring Framework. Son útiles para casos de uso como adquirir el nombre de los bean para propósitos de logging o wiring.  
