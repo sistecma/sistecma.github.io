@@ -27,6 +27,7 @@ A continuación el índice de artículos al momento:
 * [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2020/12/28/ioc-di.html)
 * [Spring IoC con Xml](https://sistecma.github.io/2021/01/01/spring-ioc-xml.html)
 * [Alcance de Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html)
+* [Estados de Ciclo de Vida](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html)
 
 
 Bienvenido.

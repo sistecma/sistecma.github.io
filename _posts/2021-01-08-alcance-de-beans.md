@@ -60,4 +60,4 @@ Spring también provee un alcance que no esta disponible por defecto y esta asoc
 #### Conclusiones
 Spring nos dá 6 tipos de alcance de beans con diferentes ciclos de vida x cada alcance, que pueden ser configurados de manera sencilla. Así mismo con algo de configuración adicional podemos usar el alcance x thread. Como siempre te invito a que revises nuestro [repositorio](https://github.com/sistecma/spring-desde-cero) para una mejor comprensión mediante la revisión de los ejemplos. 
 
-**Anterior post:** [Spring IoC con Xml](https://sistecma.github.io/2021/01/01/spring-ioc-xml.html)
+**Anterior post:** [Spring IoC con Xml](https://sistecma.github.io/2021/01/01/spring-ioc-xml.html), **Siguiente post:** [Estados asociados al ciclo de vida de Spring Beans](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html)
