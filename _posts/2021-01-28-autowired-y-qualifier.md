@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Autowired y Qualifier en Spring
-description: Un modo sencillo de resolver e inyector beans colaboradores en tus Spring beans.
+description: Un modo sencillo de resolver e inyectar colaboradores en tus Spring beans.
 image: 
 author: Hernán Moreno
 ---
