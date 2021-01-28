@@ -6,17 +6,17 @@ image:
 author: Hernán Moreno
 ---
 
-A partir de Spring 2.5, se introdujo la inyección de dependencia basada en anotaciones, lo cual generó un cambio de estilo basado en java sobre como gestionar y organizar la metadata para trabajar con Spring. Entre estos cambios una de las anotaciones principales esta @Autowired que permite que Spring resuelva e inyecte beans colaboradores en nuestros beans.
+A partir de Spring 2.5, se introdujo la inyección de dependencia basada en anotaciones, lo cual generó un cambio de estilo (basado en Java) sobre como gestionar y organizar la metadata para trabajar con Spring. Una de las anotaciones principales es @Autowired que permite que Spring resuelva e inyecte beans colaboradores en nuestros beans.
 
-Damos inicio a los artículos de wiring en Spring usando anotaciones en Java. Particularmente en este artículo veremos cómo habilitar el wiring automático y las  diversas formas de hacer wiring en los beans. También, hablaremos sobre la resolución de conflictos en los beans usando la anotación @Qualifier, así como sus posibles excepciones.
+Damos inicio a los artículos de wiring en Spring usando anotaciones en Java. Particularmente en este artículo veremos cómo habilitar el wiring automático y las  diversas formas de hacer wiring con los beans. También, hablaremos sobre la resolución de conflictos en los beans usando la anotación @Qualifier, así como sus posibles excepciones.
 
 #### Habilitar @Autowired
-Spring permite la inyección automática de dependencias. En otras palabras, al declarar todas las dependencias de los beans en un archivo de configuración, el contenedor de Spring puede conectar automáticamente las relaciones entre los beans que colaboran. Esto se llama wiring automático de Spring Beans.
+Spring permite la inyección automática de dependencias. En otras palabras, al declarar todas las dependencias de los beans en Java como metadata, el contenedor de Spring puede conectar automáticamente las relaciones entre los beans que colaboran. Esto se llama wiring automático de Spring Beans.
 
 A continuación veremos el modo más básico para habilitar el wiring automático.
 
 ##### Configuración basada en Java
-Para la configuración basada en Java en nuestra aplicación, habilitamos la inyección basada en anotaciones:
+Para la configuración basada en Java, en nuestra aplicación habilitamos la inyección basada en anotaciones:
 
 {% gist e325128f4fd8dbb54f620dae3d957e45 %}
 
