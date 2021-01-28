@@ -79,17 +79,19 @@ Para estos casos Spring buscará realizar el wiring basados por tipo y nombre au
 #### @Qualifier
 Para que quede más claro el uso de @Qualifier. Vamos a realizar las siguientes modificaciones a nuestro ejemplo anterior:
 
+* Creamos otro bean que tenga  @Component("miPrinter2") e implemente Printer
+
 {% gist 105f2ecfe269a3d6cecb5fba07782639 %}
 
-Y asumamos que PrintService requiere como colaborador a Printer y no a ConsolaPrinter.
+* Asumamos que PrintService requiere como colaborador a Printer y no a ConsolaPrinter.
 
 {% gist 18a8d07001c75ffe376e4cde402c0edf %}
 
-Lo que obtenemos es la siguiente excepción (consideramos al nuevo bean miPrinter2):
+* Lo que obtenemos es la siguiente excepción (consideramos al nuevo bean miPrinter2):
 
 {% gist 8183bbc5859c06f91b0b15aef7e7715d %}
 
-Ahora aplicando @Qualifier
+* Ahora aplicando @Qualifier
 
 {% gist 336420a5d2905d27542454380b60f5ca %}
 
