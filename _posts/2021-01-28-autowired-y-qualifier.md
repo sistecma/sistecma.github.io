@@ -21,12 +21,12 @@ Para la configuración basada en Java, en nuestra aplicación habilitamos la iny
 {% gist e325128f4fd8dbb54f620dae3d957e45 %}
 
 * La anotación @Configuration le indica a Spring que la clase AppConfig servirá como archivo de configuración para los Spring beans.
-* La anotación @ComponentScan le indica a Spring que escanee dentro del paquete com.sistecma.proyecto por todas las clases que tengan la anotación @Component para que sean consideradas como _componentes_ dentro del contenedor de Spring. Cabe destacar que la anotación @Component es la anotación más genérica en Spring y una clase decorada con @Component Spring la busca dentro del classpath y la registra como un Spring Bean. 
+* La anotación @ComponentScan le indica a Spring que escanee dentro del paquete com.sistecma.proyecto por todas las clases que tengan la anotación @Component para que sean consideradas como _componentes_ dentro del contenedor de Spring. Cabe destacar que la anotación @Component es la anotación más genérica en Spring y una clase decorada con @Component, Spring la busca dentro del classpath y la registra como un Spring Bean. 
 * La sintaxis de @Component es:
 
 {% gist 84f49b80d41081e8a89b24ff4f74b9b9 %}  
 
-**Nota-** Como alternativa, bajo configuración en xml podemos activar la configuración en java con la etiqueta <context:annotation-config>. 
+**Nota-** Como alternativa, bajo configuración en xml podemos activar la configuración en java con la etiqueta {% raw %} <context:annotation-config> {% endraw %}. 
 
 #### Usando el @Autowired
 Después de habilitar la inyección por anotaciones, podemos usar el wiring automático en propiedades, setters(métodos) y constructores.
