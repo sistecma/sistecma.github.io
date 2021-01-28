@@ -15,7 +15,7 @@ Spring permite la inyección automática de dependencias. En otras palabras, al 
 
 A continuación veremos el modo más básico para habilitar el wiring automático.
 
-##### Configuración basada en Java
+#### Configuración basada en Java
 Para la configuración basada en Java, en nuestra aplicación habilitamos la inyección basada en anotaciones:
 
 {% gist e325128f4fd8dbb54f620dae3d957e45 %}
