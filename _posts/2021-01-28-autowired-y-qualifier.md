@@ -91,9 +91,17 @@ Para que quede más claro el uso de @Qualifier. Vamos a realizar las siguientes 
 
 {% gist 8183bbc5859c06f91b0b15aef7e7715d %}
 
-* Ahora aplicando @Qualifier
+* Ahora, si aplicamos @Qualifier
 
 {% gist 336420a5d2905d27542454380b60f5ca %}
+
+* Y ejecutamos 
+
+{% gist d3dbd929e2fff441413366c00e764c9d %}
+
+* Logramos que ejecute correctamente.
+
+{% gist 65e31bd6aa955a3267cb1f72eb2ddc4b %}
 
 #### Conclusión
 En este artículo, discutimos el wiring automático y las diferentes formas de usarlo. También examinamos formas de resolver excepciones comunes de wiring automático causadas por la falta de un bean o por una inyección de bean ambigua.
