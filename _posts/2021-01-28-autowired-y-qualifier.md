@@ -106,5 +106,7 @@ Para que quede más claro el uso de @Qualifier. Vamos a realizar las siguientes 
 #### Conclusión
 En este artículo, discutimos el wiring automático y las diferentes formas de usarlo. También examinamos formas de resolver excepciones comunes de wiring automático causadas por la falta de un bean o por una inyección de bean ambigua.
 
+Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero), junto con las instrucciones de ejecución.       
+
 **Anterior post:** [Estados de Ciclo de Vida](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html)
 
