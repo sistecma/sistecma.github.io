@@ -26,11 +26,9 @@ Para la configuración basada en Java, en nuestra aplicación habilitamos la iny
 
 {% gist 84f49b80d41081e8a89b24ff4f74b9b9 %}  
 
-**Nota-** Como alternativa, bajo configuración en xml podemos activar la configuración en java con la etiqueta {% comment %} <context:annotation-config> {% endcomment %} . 
+**Nota-** Como alternativa, bajo configuración en xml podemos activar la configuración en java con la etiqueta:
 
-{% raw %}
-  {{ <context:annotation-config> }}
-{% endraw %}
+{% gist b9c0ac108b35acdf69b477855fd875af %}
 
 #### Usando el @Autowired
 Después de habilitar la inyección por anotaciones, podemos usar el wiring automático en propiedades, setters(métodos) y constructores.
