@@ -67,6 +67,8 @@ Cuando se construye un bean, las dependencias @Autowired deberían estar disponi
 
 Para solucionar esto, y en caso que querramos que el @Autowired no sea requerido para ese específico bean tenemos que cambiar así:
 
+{% gist 95120475e1f82a8b2a72a2ee14051bda %}
+
 #### Resolución de beans vía @Component
 Notaron que para el caso de ConsolaPrinter usamos la anotación @Component("miPrinter") y para PrintService solo usamos @Component. Lo que ocurre es que para el caso de ConsolaPrinter simplemente le estamos asignado un valor/indicador lógico como nombre del componente. En este caso le asigné el nombre de "miPrinter". Para el caso de PrintService este valor lógico no lo estamos considerando. 
 
