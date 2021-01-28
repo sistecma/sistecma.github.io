@@ -92,5 +92,5 @@ Ahora aplicando @Qualifier
 #### Conclusión
 En este artículo, discutimos el wiring automático y las diferentes formas de usarlo. También examinamos formas de resolver excepciones comunes de wiring automático causadas por la falta de un bean o por una inyección de bean ambigua.
 
-
+**Anterior post:** [Estados de Ciclo de Vida](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html)
 

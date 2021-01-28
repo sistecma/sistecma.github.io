@@ -61,6 +61,6 @@ En este breve artículo, hemos discutido:
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero), junto con las instrucciones de ejecución.         
 
-**Anterior post:** [Alcance de Spring Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html)
+**Anterior post:** [Alcance de Spring Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html), **Siguiente post:** [Autowired y Qualifier](https://sistecma.github.io/2021/01/28/autowired-y-qualifier.html)
 
 
