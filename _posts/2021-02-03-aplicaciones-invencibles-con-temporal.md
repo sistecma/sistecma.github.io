@@ -88,15 +88,15 @@ A fín de iniciar facilmente con Temporal. Vamos a realizar como ejemplo el típ
 
 Una vez instalado y ejecutado Temporal (ver paso previo de este artículo), descarga el ejemplo desde esta [ruta](https://github.com/sistecma/temporalio). Busca la carpeta app/go/hola y esta es la carpeta raiz.
 
-1. Ejecuta: go run worker/main.go
+* Ejecuta: go run worker/main.go
 
 {% gist 862fef234ce1da8dd3d57d05fb65949c %}
 
-2. Abre otra terminal y ejecuta: go run starter/main.go
+* Abre otra terminal y ejecuta: go run starter/main.go
 
 {% gist 8aea8785d42158932ef2c81b6bca1c84 %}
 
-3. Deberías obtener como impreso en consola: Resultado: Hola Sistecma
+* Deberías obtener como impreso en consola: Resultado: Hola Sistecma
 
 
 #### Conclusión
