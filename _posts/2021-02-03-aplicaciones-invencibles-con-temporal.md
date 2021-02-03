@@ -48,19 +48,19 @@ Temporal provee todos los mecanismos necesarios para instalar apropiadamente su 
 
 * Imagen docker- El modo más sencillo para instalar Temporal (para desarrollo) es mediante una imagen docker (obviamente asumimos que tienes configurado docker y docker-compose). 
 
-1. Clona el repositorio: [https://github.com/temporalio/docker-compose](https://github.com/temporalio/docker-compose)
+* Clona el repositorio: [https://github.com/temporalio/docker-compose](https://github.com/temporalio/docker-compose)
 
 git clone https://github.com/temporalio/docker-compose.git
 
-2. Cambia al directorio raiz del proyecto.
+* Cambia al directorio raiz del proyecto.
 
 cd  docker-compose
 
-3. Ejecuta docker-compose up
+* Ejecuta docker-compose up
 
 docker-compose up
 
-4. El servidor de Temporal provee una aplicación web para ciertas opciones administrativas (este componente es otro cliente que interactúa con el backend). Puedes validarlo en tu navegador en: localhost:8088
+* El servidor de Temporal provee una aplicación web para ciertas opciones administrativas (este componente es otro cliente que interactúa con el backend). Puedes validarlo en tu navegador en: localhost:8088
 
 _Nota:_ Existen configuraciones alternativas. Por ejemplo puedes usar la configuración con mysql, postgress o cockroach (la configuración por defecto es con Cassandra). En caso de ser necesario sigue el README en: [https://github.com/temporalio/docker-compose/blob/main/README.md](https://github.com/temporalio/docker-compose/blob/main/README.md)
 
