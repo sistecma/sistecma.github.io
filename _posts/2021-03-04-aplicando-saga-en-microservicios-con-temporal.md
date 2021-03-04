@@ -51,25 +51,25 @@ Asumiremos 4 microservicios:
 
 ![Arquitectura del sistema de viaje](/assets/images/viaje.png)
 
-En nuestro ejemplo, podemos considerar como exitoso un agendamiento de viaje cuando: el agendamiento de hotel sea exitoso, el agendamiento del vuelo sea exitoso, el agendamiento de vehiculo sea exitoso. Caso contrario no se puede realizar el viaje y la transacción debe ser reversada para aquellos pasos intermedios que fueron exitosos.  
+En nuestro ejemplo, podemos considerar como exitoso un agendamiento de viaje cuando: el agendamiento de hotel sea exitoso, el agendamiento del vuelo sea exitoso y, el agendamiento de vehiculo sea exitoso. Caso contrario no se puede realizar el viaje y la transacción debe ser reversada para aquellos pasos intermedios que fueron exitosos.  
 
 Temporal no impone un modo o estilo para codificar nuestros microservicios sin embargo, una buena práctica es considerar la equivalencia entre servicios (punto de vista de arquitectura de microservicios) con actividades (punto de vista de Temporal) y el proceso servidor (punto de vista de arquitectura de microservicios) con el worker (punto de vista de Temporal). Así, para el caso del microservicio Hotel, lo codificamos dentro de un simple archivo en go en donde las funciones reservar y cancelar son las actividades, mientras que la función main implementa el worker y registra las actividades que serán expuestas vía una cola con un nombre específico. El mismo patrón aplica para los microservicios Vehículo y Vuelo.
 
 {% gist 7edc344a3991449b03ec81c327eefc2a %}
 
-Dependiendo de la complejidad de las aplicaciones pueden existir uno o muchos workflows. Para nuestro ejemplo solo estamos considerando un solo workflow que funciona de tipo petición-respuesta e implementa la SAGA. Siguiendo el mismo patrón que los anteriores microservicios, función reservar implementa el workflow mientras que main implementa el worker todo esto encapsulado dentro de un simple archivo en go.
+Dependiendo de la complejidad de las aplicaciones pueden existir uno o muchos workflows. Para nuestro ejemplo solo estamos considerando un solo workflow que funciona de tipo petición-respuesta e implementa la SAGA. Siguiendo el mismo patrón que los anteriores microservicios, la función reservar implementa el workflow mientras que la función main implementa el worker, todo esto encapsulado dentro de un simple archivo en go.
 
 {% gist 7fd9b0a835e3e384eb93a9f0abd9fe30 %}
 
-Un tema a destacar es que cada microservicio tiene una cola única que esta asociada a su respectivo worker y actividades o worfklow. Y esto nos sirve para hacer los enrutamientos. Notar que hemos usado simples strings, pero pueden ser enrutados con interfaces.
+Un tema a destacar es que cada microservicio tiene una cola única que esta asociada a su respectivo worker y actividades o worfklow. Y esto nos sirve para hacer los enrutamientos. Notar que hemos usado simples strings para nombrar las colas y hacer los enrutamientos, pero podemos hacerlo con interfaces.
 
 {% gist db259b4405d7d5a9e3f612870797138a %}
 
-Finalmente, usamos un starter para invocar e iniciar el workflow. Notar que pudiera ser implementado con un http server sin embargo por simplicidad lo dejamos en un código simple que invoque dicho workflow.
+Finalmente, usamos un starter para invocar e iniciar el workflow. Notar que pudiera ser implementado con un http server, sin embargo por simplicidad lo dejamos en un código simple que invoque dicho workflow.
 
 {% gist 4d395839727ace21ddad188873e1ebd8 %}
 
-Temporal hace que esta aplicación tan simple tenga todos los beneficios de los microservicios, sea escalable, extremadamente resiliente y practicamente elimina los inconvenientes que se dan al adoptar una arquitectura de microservicios.
+Temporal hace que esta aplicación sea tan simple y a la vez que tenga todos los beneficios de los microservicios por defecto, sea altamente escalable, extremadamente resiliente y practicamente elimina los inconvenientes que se dan al adoptar una arquitectura de microservicios.
 
 Si ejecutamos (para detalles de ejecución hacer [click aquí](https://github.com/sistecma/temporalio/blob/main/app/go/saga/README.md)) el ejemplo veremos algo como lo mostrado a continuación:
 
@@ -101,7 +101,7 @@ Si queremos con un poco más detalle, podemos hacer click sobre el id del workfl
 
 ![Workflow completado. Web UI Detalle](/assets/images/saga/ok/web-detalle.png)
 
-Podemos también comprobar en nuestro demo que se cumple la SAGA cuando bajamos cualquiera de los microservicios. Por ejemplo si bajamos el microservicio vuelo, después del timeout preconfigurado veremos:
+Podemos también comprobar en nuestro demo que se cumple la SAGA cuando bajamos cualquiera de los microservicios. Por ejemplo si bajamos el microservicio Vuelo, después del timeout preconfigurado veremos:
 
 * Para el microservicio de Hotel
 
@@ -115,7 +115,7 @@ Podemos también comprobar en nuestro demo que se cumple la SAGA cuando bajamos 
 
 ![Workflow fallido. Microservicio Viaje](/assets/images/saga/error/viaje.png)
 
-* Starter. Como podemos observar muestra como resultado: No es posible obtener resultado del workflow workflow execution error (type: viaje.reservar, workflowID: viaje_workflowID, runID: 928df882-25d2-44a9-89a5-ac95010791dd): activity error (type: vuelo.reservar, scheduledEventID: 17, startedEventID: 0, identity: ): activity timeout (type: ScheduleToStart)
+* Starter. Como podemos observar muestra como resultado: 
 
 ![Workflow fallido. Starter](/assets/images/saga/error/starter.png)
 
@@ -132,7 +132,7 @@ Si hacemos click en History (menú principal del Web UI):
 ![Workflow fallido. Web UI History](/assets/images/saga/error/web-history.png)
 
 #### Conclusión
-En este artículo, discutimos la implementación del patrón SAGA con Temporal. Observamos la simplicidad para la construcción de microservicios, los detalles de las configuraciones, la validación de los resultados de ejecución del demo reconfirmando que SAGA funciona correctamente, y la visualización del estatus de los workflows mediante la Web UI.  
+En este artículo, discutimos la implementación del patrón SAGA con Temporal. Observamos la simplicidad para la construcción de microservicios, los detalles de las configuraciones, la validación de los resultados de ejecución del demo, reconfirmando que SAGA funciona correctamente, y la visualización del estatus de los workflows mediante la Web UI.  
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/temporalio/tree/main/app/go/saga), junto con las instrucciones de ejecución.       
 
