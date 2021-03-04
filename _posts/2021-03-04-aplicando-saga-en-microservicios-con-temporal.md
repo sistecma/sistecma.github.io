@@ -30,9 +30,9 @@ Debido a lo anteriormente mencionado, los microservicios no solo deben implement
 
 La plataforma Temporal, abstrae todos estos aspectos y permite al desarrollador enforcarse en la lógica de negocio reflejada en Workflows o flujos estructurados de interacción entre entidades que pueden ser microservicios, tareas en lotes, crons/timers. Temporal garantiza la consistencia y resiliencia del estado de los workflows implementados en ella (ya sean en python, java, golang, php, rust, etc) y los microservicios con su lógica son implementados facilmente y reflejados a través de funciones o métodos (ya sea en python, java, golang, php, rust, etc). Si todavía no has leído previamente sobre Temporal te recomiendo revisar siguiente link: [https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html)
 
-SAGA es un patrón que nos ayuda a mantener la integridad/consistencia de datos en servicios distribuidos. Una transacción en SAGA se considera exitosa cuando todos los pasos (transacciones individuales) de sus componentes son exitosos. Si alguno de los pasos falla el sistema puede reversar el estado de la aplicación a su estado original. 
+SAGA es un patrón que nos ayuda a mantener la integridad/consistencia de datos en servicios distribuidos. Una transacción en SAGA se considera exitosa cuando todos los pasos (transacciones individuales) de sus componentes son exitosos. Si alguno de los pasos falla, el sistema puede reversar el estado de la aplicación a su estado original. 
 
-Temporal es un sólido candidato para la implementación de SAGA con cualquiera de sus SDKs (java, golang, etc). A continuación ejemplificamos un caso típico, de implementación de SAGA usando Temporal.
+Temporal es un sólido candidato para la implementación de SAGA con cualquiera de sus SDKs (java, golang, etc). A continuación ejemplificamos un caso típico de implementación de SAGA usando Temporal.
 
 
 #### Aplicación para gestión de reservaciones de hotel, vuelo, y vehículo para los viajeros.  
