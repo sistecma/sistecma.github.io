@@ -6,6 +6,8 @@ description: Breve introducción a Temporal.
 author: Hernán Moreno
 ---
 
+Autor: Hernán Moreno
+
 #### El problema
 
 La tecnología esta en constante evolución. Tenemos continuas innovaciones y cambios de paradigma. No hace mucho nuestros sistemas los concebíamos como monolíticos. Grandes o pequeñas aplicaciones corrían en ambientes autosuficientes como un todo. Luego comenzamos a dividir, aplicaciones por un lado, con balanceo de cargas, redundancia, etc y bases de datos por otro lado, en clusters, etc. Y progresivamente continuamos subdividiendo los sistemas hasta llegar a los microservicios. 

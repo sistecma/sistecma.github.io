@@ -6,6 +6,8 @@ description: Transacciones distribuidas con SAGA y Temporal.
 author: Hernán Moreno
 ---
 
+Autor: Hernán Moreno
+
 Uno de los mayores retos al construir microservicios es la gestión de transacciones distribuidas. Por el hecho de ser independientes y de implementar partes de la aplicación por microservicio, como resultado introducimos más puntos de falla que no ocurrirían si la misma aplicación fuera monolítica. Por ejemplo: 
 
 * Latencia en la red
