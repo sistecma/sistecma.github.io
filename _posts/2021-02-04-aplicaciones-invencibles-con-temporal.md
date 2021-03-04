@@ -103,5 +103,5 @@ Una vez instalado y ejecutado Temporal (ver paso previo de este artículo), desc
 
 En este artículo solo hemos visto de modo muy breve que es Temporal, tocamos en muy alto nivel como armar una aplicación en Temporal y terminología básica.En otros artículos revisaremos en más detalle la arquitectura, casos de uso, etc.
 
-
+**Anterior post:** [Autowired y Qualifier en Spring Framework](https://sistecma.github.io/2021/01/28/autowired-y-qualifier.html), **Siguiente post:** [Aplicando SAGA en Microservicios con Temporal](https://sistecma.github.io/2021/03/04/aplicando-saga-en-microservicios-con-temporal.html)
 
