@@ -55,7 +55,7 @@ Dependiendo de la complejidad de las aplicaciones pueden existir uno o muchos wo
 
 {% gist 7fd9b0a835e3e384eb93a9f0abd9fe30 %}
 
-Una tema a destacar es que cada microservicio tiene una cola única que esta asociada a su respectivo worker y actividades o worfklow. Y esto nos sirve para hacer los enrutamientos. Notar que hemos usado simples strings, pero pueden ser enrutados con interfaces.
+Un tema a destacar es que cada microservicio tiene una cola única que esta asociada a su respectivo worker y actividades o worfklow. Y esto nos sirve para hacer los enrutamientos. Notar que hemos usado simples strings, pero pueden ser enrutados con interfaces.
 
 {% gist db259b4405d7d5a9e3f612870797138a %}
 
