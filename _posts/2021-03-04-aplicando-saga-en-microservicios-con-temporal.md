@@ -37,7 +37,7 @@ Temporal es un sólido candidato para la implementación de SAGA con cualquiera 
 
 #### Aplicación para gestión de reservaciones de hotel, vuelo, y vehículo para los viajeros.  
 
-La implementación la realizaremos con Golang y Temporal. 
+La implementación la realizaremos con Golang y Temporal. Cabe destacar que este ejemplo está inspirado en el [ejemplo del sitio de Temporal](https://github.com/temporalio/samples-java/tree/master/src/main/java/io/temporal/samples/bookingsaga), sin embargo no es igual y esta implementado en Go. 
 
 Asumiremos 4 microservicios: 
 
