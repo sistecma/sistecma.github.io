@@ -6,21 +6,27 @@ description: Transacciones distribuidas con SAGA y Temporal.
 author: Hernán Moreno
 ---
 
-Uno de los mayores retos al construir microservicios es la gestión de transacciones distribuidas. Por el hecho de ser independientes y de implementar partes de la aplicación por microservicio, como resultado introducimos más puntos de falla que no ocurrirían si la misma aplicación fuera monolítica. Por ejemplo: latencia en la red, fallas en cualquiera de los hosts donde reciden los microservicios, sobrecarga en cualquier de los microservicios que componen una transacción distribuida incrementando la posibilidad de generar inconsistencias y afectar rendimiento de la aplicación o sistema.
+Uno de los mayores retos al construir microservicios es la gestión de transacciones distribuidas. Por el hecho de ser independientes y de implementar partes de la aplicación por microservicio, como resultado introducimos más puntos de falla que no ocurrirían si la misma aplicación fuera monolítica. Por ejemplo: 
 
-Debido a lo anteriormente mencionado, los microservicios no solo deben implementar la lógica de negocio si no, todo el ecosistema debe estar configurado de tal modo que maneje aspectos como:
+* Latencia en la red
 
-Reintentos- Mecanismos que permiten repetir las llamadas a microservicios, cuando existen fallas de red o en el microservicio llamado.
+* Fallas en cualquiera de los hosts donde reciden los microservicios
 
-Contrapresión- Mecanismos que limitan la carga en los microservicios.
+* Sobrecarga en cualquier de los microservicios que componen una transacción distribuida incrementando la posibilidad de generar inconsistencias y afectar rendimiento de la aplicación o sistema.
 
-Persistencia- Gestión del estado de los procesos (workflows).
+Debido a lo anteriormente mencionado, los microservicios no solo deben implementar la lógica de negocio si no que, todo el ecosistema debe estar configurado de tal modo que maneje aspectos como:
 
-Descubrimiento de servicios- Que permitan detectar los servicios componentes, en lo posible abstrayendo detalles de ips y puertos que dificulten el mantenimiento del sistema.
+* Reintentos- Mecanismos que permiten repetir las llamadas a microservicios, cuando existen fallas de red o en el microservicio llamado.
 
-Encolamiento- Que permite desacoplar los servicios y hacerlos más resilientes.
+* Contrapresión- Mecanismos que limitan la carga en los microservicios.
 
-Balanceo de carga- A fín de que el sistema se ejecute con rendimiento óptimo.
+* Persistencia- Gestión del estado de los procesos (workflows).
+
+* Descubrimiento de servicios- Que permitan detectar los servicios componentes, en lo posible abstrayendo detalles de ips y puertos que dificulten el mantenimiento del sistema.
+
+* Encolamiento- Que permite desacoplar los servicios y hacerlos más resilientes.
+
+* Balanceo de carga- A fín de que el sistema se ejecute con rendimiento óptimo.
 
 La plataforma Temporal, abstrae todos estos aspectos y permite al desarrollador enforcarse en la lógica de negocio reflejada en Workflows o flujos estructurados de interacción entre entidades que pueden ser microservicios. Temporal garantiza la consistencia y resiliencia del estado de los workflows implementados en ella (ya sean en python, java, golang,php, rust, etc) y los microservicios con su lógica son implementados facilmente y reflejados a través de funciones o métodos (ya sea en python, java, golang, php, rust, etc). Si todavía no has leído previamente sobre Temporal te recomiendo revisar siguiente link: [https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html)
 
