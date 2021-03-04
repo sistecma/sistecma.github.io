@@ -6,7 +6,7 @@ description: Transacciones distribuidas con SAGA y Temporal.
 author: Hernán Moreno
 ---
 
-Uno de los mayores retos al construir microservicios es la gestión de transacciones distribuidas. Por el hecho de ser independientes y de implementar partes de la aplicación por microservicio como resultado introducimos más puntos de falla que no ocurrirían si la misma aplicación fuera monolítica. Problemas típicos de los microservicios tales como latencia de la red, fallas en cualquiera de los hosts donde reciden o sobrecarga en cualquier de los microservicios que componen una transacción distribuida pueden afectar la consistencia y rendimiento de una aplicación o sistema.
+Uno de los mayores retos al construir microservicios es la gestión de transacciones distribuidas. Por el hecho de ser independientes y de implementar partes de la aplicación por microservicio, como resultado introducimos más puntos de falla que no ocurrirían si la misma aplicación fuera monolítica. Por ejemplo: latencia en la red, fallas en cualquiera de los hosts donde reciden los microservicios, sobrecarga en cualquier de los microservicios que componen una transacción distribuida incrementando la posibilidad de generar inconsistencias y afectar rendimiento de la aplicación o sistema.
 
 Debido a lo anteriormente mencionado, los microservicios no solo deben implementar la lógica de negocio si no, todo el ecosistema debe estar configurado de tal modo que maneje aspectos como:
 
