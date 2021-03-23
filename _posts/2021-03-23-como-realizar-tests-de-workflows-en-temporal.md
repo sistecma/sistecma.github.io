@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ¿Cómo realizar tests de tus workflows en Temporal?.
+title: ¿Cómo realizar tests de tus workflows en Temporal?
 image: 
 description: Unit Tests con Temporal.
 author: Hernán Moreno
@@ -21,6 +21,8 @@ Si deseas revisar el paso a paso sobre como construir este ejemplo, te lo dejo e
 El unit test es muy simple:
 
 {% gist f8b61db0984678f9bfd468dca9e4d214 %}
+
+Y el resultado:
 
 {% gist f697ade2f68cab6cd10e7a4b21779d64 %}
 
