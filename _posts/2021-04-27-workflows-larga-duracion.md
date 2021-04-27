@@ -47,7 +47,17 @@ Recuerda, que necesitamos de un mecanismo que ejecute o inicie el workflow, en t
 
 {% gist 9a60f2ec044e1a547d52f0bcfb231fa9 %}
 
-Y aquí podemos apreciar el resultado de la ejecución, vía maven.
+Para la ejecución:
+
+* Si no sabes todavía qué es Temporal y como usarlo, revisa este [post](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html) y descargalo.
+
+* Sube el servicio de Temporal, en mi caso lo uso facilmente con docker (ver el punto anterior)
+
+* Descarga el ejemplo de esta ruta [https://github.com/sistecma/temporalio](https://github.com/sistecma/temporalio)
+
+* Busca el directorio app/java/wallet desde el directorio principal donde se descargó
+
+* Y luego, podemos ejecutar el ejemplo facilmente vía maven.
 
 {% gist 3409d6da32035df52d4a49b4f61bbd40 %}
 
