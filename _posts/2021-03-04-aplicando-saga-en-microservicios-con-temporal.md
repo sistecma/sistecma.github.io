@@ -138,9 +138,5 @@ En este artículo, discutimos la implementación del patrón SAGA con Temporal. 
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/temporalio/tree/main/app/go/saga), junto con las instrucciones de ejecución.       
 
-<<<<<<< HEAD
-**Anterior post:** [Construye aplicaciones invencibles con Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html), **Siguiente post:** [Construye aplicaciones invencibles con Temporal](https://sistecma.github.io/2021/04/27/workflows-larga-duracion.html)
+**Anterior post:** [Construye aplicaciones invencibles con Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html),
 
-=======
-**Anterior post:** [Construye aplicaciones invencibles con Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html), **Siguiente post** [¿Cómo realizar tests de tus workflows en Temporal?](https://sistecma.github.io/2021/03/23/como-realizar-tests-de-workflows-en-temporal.html)
->>>>>>> ad0b913aaae1f3a36933c1cf1794999d07799b89
