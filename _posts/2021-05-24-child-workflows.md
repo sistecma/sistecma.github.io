@@ -8,7 +8,7 @@ author: Hernán Moreno
 
 Autor: Hernán Moreno
 
-El concepto de workflows hijos (child workflows de ahora en adelante), existe como complemento al concepto de workflow en Temporal. Recordemos, que para Temporal un workflow es simplemente un método o función que maneja estado (es stateful), es durable y tolerante a fallas. El concepto de child workflows nos permite "dividir" lógica de negocio, de tal manera que workflows puedan invocar otros workflows, cuando necesitemos:
+El concepto de workflows hijos (child workflows de ahora en adelante), existe como complemento al concepto de workflow en Temporal. Recordemos, que para [Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html) un workflow es simplemente un método o función que maneja estado (es stateful), es durable y tolerante a fallas. El concepto de child workflows nos permite "dividir" lógica de negocio, de tal manera que workflows puedan invocar otros workflows, cuando necesitemos:
 
 * Modularizar una lógica compleja, desacomplándola y dividiéndola en partes.
 
@@ -24,7 +24,7 @@ Existe la siguiente consideración al momento de considerar usar child workflows
 
 * Son útiles cuando **no** se requiere una lógica tan acoplada entre el parent workflow y su child workflow. Esto debido a que el estado no es compartido entre ellos. Solo existe comunicación asíncrona vía [signals](https://sistecma.github.io/2021/04/27/workflows-larga-duracion.html) 
 
-El modo de invocación de un child workflow es bastante similar a como se hace con la invocación de una actividad. Como siempre, para ilustrar este nuevo concepto prefiero hacerlo a través de un simple ejemplo, y por simplicidad usaré Golang. En este caso será solamente un parent workflow que invoca a un único child workflow. El child workflow solo devuelve como valor un string indicando que ha recibido el mensaje del parent workflow.
+El modo de invocación de un child workflow es bastante similar a como se hace con la invocación de una [actividad](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html). Como siempre, para ilustrar este nuevo concepto prefiero hacerlo a través de un simple ejemplo, y por simplicidad usaré Golang. En este caso será solamente un parent workflow que invoca a un único child workflow. El child workflow solo devuelve como valor un string indicando que ha recibido el mensaje del parent workflow.
 
 * Definimos los workflows
 
