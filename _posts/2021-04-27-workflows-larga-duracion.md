@@ -67,4 +67,4 @@ En este artículo, discutimos la implementación de mecanismos de actualización
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/temporalio/tree/main/app/java), junto con las instrucciones de ejecución.       
 
-**Anterior post:** [¿Cómo realizar tests de tus workflows en Temporal?](https://sistecma.github.io/2021/03/23/como-realizar-tests-de-workflows-en-temporal.html)
+**Anterior post:** [¿Cómo realizar tests de tus workflows en Temporal?](https://sistecma.github.io/2021/03/23/como-realizar-tests-de-workflows-en-temporal.html), **Siguiente post:** [Child workflows](https://sistecma.github.io/2021/05/24/child-workflows.html)
