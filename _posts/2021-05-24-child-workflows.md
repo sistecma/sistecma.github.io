@@ -52,13 +52,9 @@ Para ejecutar este ejemplo:
 
 2- Ejecutar el worker
 
-go run child/tpl/.
-
 {% gist 5fdb7d50063af44fcec5ec42fff76374 %}
 
 3- Ejecutar el starter
-
-go run child/starter/.
 
 {% gist afdea89fa6312bd56da7c8df13c5750e %}
 
