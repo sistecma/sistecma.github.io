@@ -27,89 +27,31 @@
 		{{ content }}
         {% if page.disqus %} {% include disqus.html %} {%endif %}
 	</div>
+	<div>
+	Estos son los previos y posts: 
+
+	{% if page.next %}
+	    {% if page.next.url %}
+	    {% if page.next.subtitle %}
+	    {{page.next.title}}&nbsp;<a href="{{page.next.url}}">{{page.next.subtitle}}</a>
+	    {% else %}
+	    <a href="{{page.next.url}}">{{page.next.title}}</a>
+	    {% endif %}
+	    {% endif %}
+	    {% endif %}
+
+	    {% if page.previous %}
+	    {% if page.previous.url %}
+	    {% if page.previous.subtitle %}
+	    {{page.previous.title}}&nbsp;<a href="{{page.previous.url}}">{{page.previous.subtitle}}</a>
+	    {% else %}
+	    <a href="{{page.previous.url}}">{{page.previous.title}}</a>
+	    {% endif %}
+	    {% endif %}
+	    {% endif %}	
+	</div>	
 
 </section>
-<div>
-Estos son los previos y posts: 
-
-{% if page.next %}
-    {% if page.next.url %}
-    {% if page.next.subtitle %}
-    {{page.next.title}}&nbsp;<a href="{{page.next.url}}">{{page.next.subtitle}}</a>
-    {% else %}
-    <a href="{{page.next.url}}">{{page.next.title}}</a>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-
-    {% if page.previous %}
-    {% if page.previous.url %}
-    {% if page.previous.subtitle %}
-    {{page.previous.title}}&nbsp;<a href="{{page.previous.url}}">{{page.previous.subtitle}}</a>
-    {% else %}
-    <a href="{{page.previous.url}}">{{page.previous.title}}</a>
-    {% endif %}
-    {% endif %}
-    {% endif %}	
-</div>	
-<table> 
-    <tr><td>&nbsp;</td><td>Topic</td><td>Subtopic</td></tr>
-    {% if page.next %}
-    {% if page.next.url %}
-    {% if page.next.subtitle %}
-    <tr><td>&nbsp;&nbsp;Next:&nbsp;&gt;</td><td> {{page.next.title}}</td><td><a class="prev" href="{{page.next.url}}">&nbsp;{{page.next.subtitle}}&nbsp;</td></tr>
-    {% else %}
-    <tr><td>&nbsp;&nbsp;Next:&nbsp;&gt;</td><td> <a class="prev" href="{{page.next.url}}">&nbsp;{{page.next.title}}&nbsp;</a></td><td>&nbsp;</td></tr>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-
-    {% if page.previous %}
-    {% if page.previous.url %}
-    {% if page.previous.subtitle %}
-    <tr><td>&lt;&nbsp;&nbsp;Prev:&nbsp;&nbsp;</td><td> {{page.previous.title}}</td><td><a class="prev" href="{{page.previous.url}}">&nbsp;{{page.previous.subtitle}}&nbsp;</td></tr>
-    {% else %}
-    <tr><td>&lt;&nbsp;&nbsp;Prev:&nbsp;&nbsp;</td><td> <a class="prev" href="{{page.previous.url}}">&nbsp;{{page.previous.title}}&nbsp;</a></td><td>&nbsp;</td></tr>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-    
-
-     
-    {% if page.category %}
-    {% for section in site.data.sections %}
-    {% assign attr = section[0] %}
-    {% if attr == page.category %}
-    {% assign label = section[1] %}   
-    {% endif %}
-    {% endfor %}
-    {% if label %}
-    <tr><td><i>This Category:</i></td><td><a href="/cats/{{ page.category }}/">{{ label }}</a></td></tr>
-
-
-    {% if page.previous_in_category %}
-    {% if page.previous_in_category.url %}
-    {% if page.previous_in_category.subtitle %}
-    <tr><td>&nbsp;&nbsp;Next:&nbsp;&gt;</td><td> {{page.previous_in_category.title}}</td><td><class="prev" href="{{page.previous_in_category.url}}">&nbsp;{{page.previous_in_category.subtitle}}&nbsp;</td></tr>
-    {% else %}
-    <tr><td>&nbsp;&nbsp;Next:&nbsp;&gt;</td><td> <a class="prev" href="{{page.previous_in_category.url}}">&nbsp;{{page.previous_in_category.title}}&nbsp;</a></td><td>&nbsp;</td></tr>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-
-    {% if page.next_in_category %}
-    {% if page.next_in_category.url %}
-    {% if page.next_in_category.subtitle %}
-    <tr><td>&lt;&nbsp;&nbsp;Prev:&nbsp;&nbsp;</td><td> {{page.next_in_category.title}}</td><td><a class="prev" href="{{page.next_in_category.url}}">&nbsp;{{page.next_in_category.subtitle}}&nbsp;</td></tr>
-    {% else %}
-    <tr><td>&lt;&nbsp;&nbsp;Prev:&nbsp;&nbsp;</td><td> <a class="prev" href="{{page.next_in_category.url}}">&nbsp;{{page.next_in_category.title}}&nbsp;</a></td><td>&nbsp;</td></tr>
-    {% endif %} {% end raw %}
-    {% endif %}
-    {% endif %}
-
-    {% endif %}
-    {% endif %}
-</table>
 
 </div>
 
