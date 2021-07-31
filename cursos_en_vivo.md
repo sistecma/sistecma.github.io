@@ -4,6 +4,7 @@ title: CURSOS EN VIVO
 description: Información sobre nuestros cursos en vivo
 image: assets/images/banner.jpg
 nav-menu: true
+disqus: false
 ---
 
 ## 20 de Enero 2021 (19:00 - 21:00 GMT-5)
