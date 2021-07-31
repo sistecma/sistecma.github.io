@@ -1,6 +1,6 @@
 ---
 layout: home
-title: HOME
+title: Home
 landing-title: 'Hello, Welcome to my Blog.'
 description: null
 image: null
@@ -23,14 +23,6 @@ Pre-requisitos:
 * Conocimientos de maven
 
 A continuación el índice de artículos al momento:
-* [Spring Framework y su Relevancia](https://sistecma.github.io/2020/12/27/spring-y-relevancia.html) 
-* [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2020/12/28/ioc-di.html)
-* [Spring IoC con Xml](https://sistecma.github.io/2021/01/01/spring-ioc-xml.html)
-* [Alcance de Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html)
-* [Estados de Ciclo de Vida](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html)
-* [Autowired y Qualifier](https://sistecma.github.io/2021/01/28/autowired-y-qualifier.html)
-
-Todos los posts:
 
 <ul>
   {% for post in site.posts %}
