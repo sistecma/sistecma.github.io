@@ -1,7 +1,7 @@
 ---
 layout: home
 title: HOME
-landing-title: 'Hello, I'm Hernan Moreno.
+landing-title: 'Hello, I am Hernan Moreno.'
 description: null
 image: null
 author: null
