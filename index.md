@@ -30,4 +30,14 @@ A continuación el índice de artículos al momento:
 * [Estados de Ciclo de Vida](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html)
 * [Autowired y Qualifier](https://sistecma.github.io/2021/01/28/autowired-y-qualifier.html)
 
+Todos los posts:
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 Bienvenido.
