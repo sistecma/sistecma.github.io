@@ -4,6 +4,7 @@ title: Workflows hijos en Temporal
 image: 
 description: Workflows que invocan a otros workflows
 author: Hernán Moreno
+disqus: true
 ---
 
 Autor: Hernán Moreno
