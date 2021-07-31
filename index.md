@@ -1,7 +1,7 @@
 ---
 layout: home
 title: HOME
-landing-title: 'Hello, I'm Hernan. Welcome to my Blog.
+landing-title: 'Hello, I'm Hernan Moreno.
 description: null
 image: null
 author: null
