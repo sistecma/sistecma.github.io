@@ -4,6 +4,7 @@ title: Autowired y Qualifier en Spring
 description: Un modo sencillo de resolver e inyectar colaboradores en tus Spring beans.
 image: 
 author: Hernán Moreno
+disqus: true
 ---
 
 A partir de Spring 2.5, se introdujo la inyección de dependencia basada en anotaciones, lo cual generó un cambio de estilo (basado en Java) sobre como gestionar y organizar la metadata para trabajar con Spring. Una de las anotaciones principales es @Autowired que permite que Spring resuelva e inyecte beans colaboradores en nuestros beans.
@@ -108,4 +109,3 @@ En este artículo, discutimos el wiring automático y las diferentes formas de u
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero), junto con las instrucciones de ejecución.       
 
-**Anterior post:** [Estados de Ciclo de Vida](https://sistecma.github.io/2021/01/25/estados-de-ciclo-de-vida.html), **Siguiente post:** [Construye aplicaciones invencibles con Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html)

@@ -7,8 +7,6 @@ author: Hernán Moreno
 disqus: true
 ---
 
-Autor: Hernán Moreno
-
 El concepto de workflows hijos (child workflows de ahora en adelante), existe como complemento al concepto de workflow en Temporal. Recordemos, que para [Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html) un workflow es simplemente un método o función que maneja estado (es stateful), es durable y tolerante a fallas. El concepto de child workflows nos permite "dividir" lógica de negocio, de tal manera que workflows puedan invocar otros workflows, cuando necesitemos:
 
 * Modularizar una lógica compleja, desacomplándola y dividiéndola en partes.
@@ -66,4 +64,3 @@ En este artículo, discutimos como llamar workflows desde otro workflow, cuando 
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/temporalio/tree/main/app/go), junto con las instrucciones de ejecución.       
 
-**Anterior post:** [Workflows de larga duración](https://sistecma.github.io/2021/04/27/workflows-larga-duracion.html)

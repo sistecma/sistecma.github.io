@@ -5,6 +5,7 @@ description: Revisión del uso de Spring con Xml.
 image: 
 author: Hernán Moreno
 tags: SpringFramework
+disqus: true
 ---
 
 La Inversión de Control (IoC) en Spring puede realizarse vía Xml o con configuración en Java. Actualmente el estándar es usar la configuración vía Java, sin embargo existen ciertos casos de uso para los cuales usar Xml es lo más apropiado. Por ejemplo:
@@ -122,5 +123,3 @@ En este breve artículo, hemos discutido:
 * Revisamos ciertos mecanismos sobre como organizar nuestra metadata en diversos Xml y como entrelazarlos e invocarlos en código.
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero), junto con las instrucciones de ejecución.         
-
-**Anterior post:** [Inversión de Control e Inyección de Dependencias](https://sistecma.github.io/2020/12/28/ioc-di.html), **Siguiente post:** [Alcance de Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html)

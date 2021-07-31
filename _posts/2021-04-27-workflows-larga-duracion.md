@@ -4,9 +4,9 @@ title: Workflows de larga duración
 image: 
 description: Transacciones que van más allá de la típica solicitud/respuesta (request/reply).
 author: Hernán Moreno
+disqus: true
 ---
 
-Autor: Hernán Moreno
 
 Existen muchos casos de uso en los que muchos actores están involucrados y cuyas transacciones son de larga duración, pudiendo durar minutos, horas o incluso semanas. Por ejemplo el proceso de activación de tu plan celular. Típicamente no es instantaneo dependendiendo del país, regulaciones y del operador dicha activación demorará minutos u horas inclusive de un día para otro en muchos casos. Así mismo, la activación como tal debe pasar por ciertos estados: creación del cliente la plataforma de negocios, activación de los servicios en la red celular, etc.
 
@@ -67,4 +67,3 @@ En este artículo, discutimos la implementación de mecanismos de actualización
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/temporalio/tree/main/app/java), junto con las instrucciones de ejecución.       
 
-**Anterior post:** [¿Cómo realizar tests de tus workflows en Temporal?](https://sistecma.github.io/2021/03/23/como-realizar-tests-de-workflows-en-temporal.html), **Siguiente post:** [Child workflows](https://sistecma.github.io/2021/05/24/child-workflows.html)

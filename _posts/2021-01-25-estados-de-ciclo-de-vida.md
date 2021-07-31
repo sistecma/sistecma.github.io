@@ -4,6 +4,7 @@ title: Estados asociados al ciclo de vida de Spring Beans
 description: Estados asociados a creación y destrucción de beans y como aprovecharlo
 image: 
 author: Hernán Moreno
+disqus: true
 ---
 
 Spring ofrece varias formas de aprovechar el ciclo de vida de los beans. En muy alto nivel tenemos creación y destrucción del bean, sin embargo entre cada etapa existen pasos intermedios que nos pueden ser de utilidad. Por ejemplo en ocasiones que necesitamos hacer algún tipo de inicialización al momento de creación del bean o limpieza de recursos al momento de destruirse el bean. 
@@ -60,7 +61,5 @@ En este breve artículo, hemos discutido:
 * Notamos que si bien es cierto nos da una buena integración con Spring, así mismo acopla nuestros beans a Spring.  
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/spring-desde-cero), junto con las instrucciones de ejecución.         
-
-**Anterior post:** [Alcance de Spring Beans](https://sistecma.github.io/2021/01/08/alcance-de-beans.html), **Siguiente post:** [Autowired y Qualifier](https://sistecma.github.io/2021/01/28/autowired-y-qualifier.html)
 
 

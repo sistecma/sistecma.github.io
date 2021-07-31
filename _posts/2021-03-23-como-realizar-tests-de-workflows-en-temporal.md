@@ -4,9 +4,8 @@ title: ¿Cómo realizar tests de tus workflows en Temporal?
 image: 
 description: Unit Tests con Temporal.
 author: Hernán Moreno
+disqus: true
 ---
-
-Autor: Hernán Moreno
 
 Una de las grandes ventajas de hacer workflows en código es que puedes realizar tests de estos. Lo cual es muy complicado de hacer para otros orquestadores como Airflow por ejemplo. Con el poder de tener workflows como código tus unit tests pueden tener la complejidad que desees con las mismas herramientas estándar que conoces como desarrollador. 
 
@@ -32,4 +31,3 @@ Como siempre, el código lo puedes descargar en nuestro [repo](https://github.co
 
 En este artículo aprendimos como realizar unit tests para probar nuestros workflows con Temporal.
 
-**Anterior post:** [Aplicando SAGA en Microservicios con Temporal](https://sistecma.github.io/2021/03/04/aplicando-saga-en-microservicios-con-temporal.html), **Siguiente post:** [Workflows de larga duración](https://sistecma.github.io/2021/04/27/workflows-larga-duracion.html)

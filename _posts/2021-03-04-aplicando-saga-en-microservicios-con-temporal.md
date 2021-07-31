@@ -4,9 +4,9 @@ title: Aplicando el patrón SAGA en tus microservicios construidos con Temporal.
 image: 
 description: Transacciones distribuidas con SAGA y Temporal.
 author: Hernán Moreno
+disqus: true
 ---
 
-Autor: Hernán Moreno
 
 Uno de los mayores retos al construir microservicios es la gestión de transacciones distribuidas. Por el hecho de ser independientes y de implementar partes de la aplicación por microservicio, como resultado introducimos más puntos de falla que no ocurrirían si la misma aplicación fuera monolítica. Por ejemplo: 
 
@@ -137,6 +137,4 @@ Si hacemos click en History (menú principal del Web UI):
 En este artículo, discutimos la implementación del patrón SAGA con Temporal. Observamos la simplicidad para la construcción de microservicios, los detalles de las configuraciones, la validación de los resultados de ejecución del demo, reconfirmando que SAGA funciona correctamente, y la visualización del estatus de los workflows mediante la Web UI.  
 
 Para una comprensión completa revisar el código fuente incluido en este [repositorio](https://github.com/sistecma/temporalio/tree/main/app/go/saga), junto con las instrucciones de ejecución.       
-
-**Anterior post:** [Construye aplicaciones invencibles con Temporal](https://sistecma.github.io/2021/02/04/aplicaciones-invencibles-con-temporal.html), **Siguiente post:** [¿Cómo realizar tests de tus workflows en Temporal?](https://sistecma.github.io/2021/03/23/como-realizar-tests-de-workflows-en-temporal.html)
 
