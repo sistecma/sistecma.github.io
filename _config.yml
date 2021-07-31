@@ -1,7 +1,7 @@
 # site settings
 title: Sistecma
-subtitle: Innovación y Tecnología
-email: admin@sistecma.com
+subtitle: Systems / Execution / Devops 
+email: hmoreno.pro@gmail.com
 description: <h5>Aprende la mejor tecnología.<br/>Acelera tu carrera profesional.<h5/>
 #baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
 baseurl: "/" # the subpath of your site, e.g. /blog
