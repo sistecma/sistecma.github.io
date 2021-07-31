@@ -16,7 +16,7 @@ phone: (593) 989812730
 
 # homepage tiles
 tiles-source: posts # accepts "posts" or "pages"
-tiles-count: 7
+tiles-count: 10
 
 # social settings
 500px_url:
