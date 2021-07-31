@@ -29,7 +29,27 @@
 	</div>
 
 </section>
+<div>
+{% if page.next %}
+    {% if page.next.url %}
+    {% if page.next.subtitle %}
+    {{page.next.title}}&nbsp;<a href="{{page.next.url}}">{{page.next.subtitle}}</a>
+    {% else %}
+    <a href="{{page.next.url}}">{{page.next.title}}</a>
+    {% endif %}
+    {% endif %}
+    {% endif %}
 
+    {% if page.previous %}
+    {% if page.previous.url %}
+    {% if page.previous.subtitle %}
+    {{page.previous.title}}&nbsp;<a href="{{page.previous.url}}">{{page.previous.subtitle}}</a>
+    {% else %}
+    <a href="{{page.previous.url}}">{{page.previous.title}}</a>
+    {% endif %}
+    {% endif %}
+    {% endif %}	
+</div>	
 <table> 
     <tr><td>&nbsp;</td><td>Topic</td><td>Subtopic</td></tr>
     {% if page.next %}
