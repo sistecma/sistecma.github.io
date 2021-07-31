@@ -1,7 +1,7 @@
 ---
 layout: home
-title: INICIO
-landing-title: 'Sistecma Blog'
+title: HOME
+landing-title: 'SISTECMA'
 description: null
 image: null
 author: null
