@@ -1,7 +1,7 @@
 ---
 layout: home
 title: HOME
-landing-title: 'SISTECMA'
+landing-title: 'Hello, I'm Hernan. Welcome to my Blog.
 description: null
 image: null
 author: null
